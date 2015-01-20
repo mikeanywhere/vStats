@@ -1,0 +1,354 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/grain_progress_bar"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/grain_title"
+        android:layout_alignRight="@+id/user_level"
+        android:layout_alignEnd="@+id/user_level" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/animal_progress_bar"
+        android:indeterminate="false"
+        android:progressTint="#ffff1410"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/animals_titles"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/co2_progress_bar"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/co2_title"
+        android:layout_alignRight="@+id/user_level"
+        android:layout_alignEnd="@+id/user_level" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/water_progress_bar"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/water_title"
+        android:layout_alignRight="@+id/user_level"
+        android:layout_alignEnd="@+id/user_level" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Grain saved:"
+        android:id="@+id/grain_title"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/co2_progress_bar_2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Co2 emissions cut:"
+        android:id="@+id/co2_title"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/rainforest_progress_bar_3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Rainforest rescued:"
+        android:id="@+id/rainforest_title"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/water_progress_bar_5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Water not Wasted:"
+        android:id="@+id/water_title"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/animal_progress_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Animals Allowed to Live:"
+        android:id="@+id/animals_titles"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/user_level_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Look what you\&apos;ve done already!"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/animals_number"
+        android:layout_alignTop="@+id/animals_titles"
+        android:layout_toRightOf="@+id/animals_titles"
+        android:layout_toEndOf="@+id/animals_titles" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/water_number"
+        android:layout_alignTop="@+id/water_title"
+        android:layout_toRightOf="@+id/water_title"
+        android:layout_toEndOf="@+id/water_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/rainforest_number"
+        android:layout_alignTop="@+id/rainforest_title"
+        android:layout_toRightOf="@+id/rainforest_title"
+        android:layout_toEndOf="@+id/rainforest_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/co2_number"
+        android:layout_below="@+id/rainforest_progress_bar_3"
+        android:layout_toRightOf="@+id/rainforest_title"
+        android:layout_toEndOf="@+id/rainforest_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/grain_number"
+        android:layout_alignTop="@+id/grain_title"
+        android:layout_toRightOf="@+id/grain_title"
+        android:layout_toEndOf="@+id/grain_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Keep going! Your current level is:"
+        android:id="@+id/user_level_title"
+        android:paddingBottom="30dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/user_level"
+        android:layout_alignTop="@+id/user_level_title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/water_progress_bar_3"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/water_progress_bar_2"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/water_progress_bar_2"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/water_progress_bar" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/water_progress_bar_4"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/water_progress_bar_3"
+        android:layout_alignRight="@+id/water_progress_bar_3"
+        android:layout_alignEnd="@+id/water_progress_bar_3" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/water_progress_bar_5"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/water_progress_bar_4"
+        android:layout_alignRight="@+id/water_progress_bar_4"
+        android:layout_alignEnd="@+id/water_progress_bar_4" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rainforest_progress_bar"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/rainforest_title"
+        android:layout_alignRight="@+id/water_progress_bar_5"
+        android:layout_alignEnd="@+id/water_progress_bar_5" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rainforest_progress_bar_2"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/rainforest_progress_bar"
+        android:layout_alignRight="@+id/rainforest_progress_bar"
+        android:layout_alignEnd="@+id/rainforest_progress_bar" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rainforest_progress_bar_3"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/rainforest_progress_bar_2"
+        android:layout_alignRight="@+id/rainforest_progress_bar_2"
+        android:layout_alignEnd="@+id/rainforest_progress_bar_2" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/co2_progress_bar_2"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/co2_progress_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/grain_progress_bar_2"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/grain_progress_bar"
+        android:layout_alignRight="@+id/user_level"
+        android:layout_alignEnd="@+id/user_level" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/grain_progress_bar_3"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/grain_progress_bar_2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/grain_progress_bar_4"
+        android:indeterminate="false"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/grain_progress_bar_3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
+
